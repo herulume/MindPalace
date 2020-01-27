@@ -1,0 +1,7 @@
+* Active Calculus 1
+** Understanding the Derivative
+   - Calculus can be viewed broadly as the study of change
+   - "How fast is the quantity changing?"
+
+**** Activity 1.1.1 / 1.1.2
+     - s(t) = 64 - 16(t - 1)^2
