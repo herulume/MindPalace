@@ -15,4 +15,5 @@ Book Name | Author(s)
 Topic |
 ------|
 [Krav-Maga Yellow belt](./personal/kravmaga/yellowbelt.org)
+[Personal finances with ledger and Emacs](./personal/ledger.org)
 ----
