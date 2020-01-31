@@ -2,16 +2,16 @@
   For every debit there is at least one credit.
   The sum of all debit entries will be equal to the sum of all credit entries for every transaction.
 ** Terminology
-   * Account: A label describing an amount of something
-   * Credit: The addition of value to an account
-   * Debit: The deduction of value from an account
-   * Transaction: A collection of credits and debits with a timestamp
+   * Account :: A label describing an amount of something
+   * Credit :: The addition of value to an account
+   * Debit :: The deduction of value from an account
+   * Transaction :: A collection of credits and debits with a timestamp
 *** Five common categories of accounts
-    * Assets: Bank accounts, wallet, investments, loans credited
-    * Income: paychecks, gifts, interest
-    * Expenses: groceries, taxes, gifts given, donations
-    * Liabilities: mortgage, student loans, credit cards, loans in general
-    * Equity: everything else (opening balances, cashback, errors)
+    * Assets :: Bank accounts, wallet, investments, loans credited
+    * Income :: paychecks, gifts, interest
+    * Expenses :: groceries, taxes, gifts given, donations
+    * Liabilities :: mortgage, student loans, credit cards, loans in general
+    * Equity :: everything else (opening balances, cashback, errors)
 *** Example of a transaction
 #+BEGIN_SRC ledger
 2020-01-30 Coffee
