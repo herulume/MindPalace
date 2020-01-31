@@ -7,11 +7,11 @@
    * Debit :: The deduction of value from an account
    * Transaction :: A collection of credits and debits with a timestamp
 *** Five common categories of accounts
-    Assets :: Bank accounts, wallet, investments, loans credited
-    Income :: paychecks, gifts, interest
-    Expenses :: groceries, taxes, gifts given, donations
-    Liabilities :: mortgage, student loans, credit cards, loans in general
-    Equity :: everything else (opening balances, cashback, errors)
+    * Assets :: Bank accounts, wallet, investments, loans credited
+    * Income :: paychecks, gifts, interest
+    * Expenses :: groceries, taxes, gifts given, donations
+    * Liabilities :: mortgage, student loans, credit cards, loans in general
+    * Equity :: everything else (opening balances, cashback, errors)
 *** Example of a transaction
 #+BEGIN_SRC ledger
 2020-01-30 Coffee
