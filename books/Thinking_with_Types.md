@@ -63,3 +63,155 @@ fromSpin2 Down = True
 ```
 
 For any two types with cardinality `n` there are `n!` unique isomorphisms.
+
+### Sum, Product and Exponential Types
+
+### Sum Types
+
+The cardinality of a sum type is the sum of the cardinalities of its constructors.
+
+The canonical sum type is `Either a b`.
+
+```haskell
+data Either a b = Left a | Right b
+data Maybe a = Nothing | Just a
+
+-- |Either| = |a| + |b|
+-- |Either Bool Spin| = |Bool| + |Spin| = 2 + 2 = 4
+
+-- |Maybe a| = |Nothing| + |a| = 1 + |a|
+-- |Maybe Bool| = |Nothing| + |Bool| = 1 + 2 = 3
+```
+
+`Either Unit Bool` is isomorphic to `Maybe Bool`, existing 3 unique isomorphisms.
+
+```haskell
+-- |Either Unit Bool| = |Unit| + |Bool| = 1 + 2 = 3
+-- |Maybe Bool| = |Nothing| + |Bool| = 1 + 2 = 3
+```
+
+We can think of the void type as being an identity for sum types (`a + Void = a`).
+
+```haskell
+sumUnitTo :: Either a Void -> a
+sumUnitTo (Left a) = a
+sumUnitTo (Right v) = absurd v -- bluff
+
+sumUnitFrom :: a -> Either a Void
+sumUnitFrom = Left
+```
+
+### Product Types
+
+Product types are dual to sum types.
+
+The cardinality of a product type is the product of the cardinalities of its constructors.
+
+The canonical product type is `(a, b)`
+
+```haskell
+data MixedFraction a =
+  Fraction
+  { mixedBit    :: Word8
+  , numerator   :: a
+  , denominator :: a
+  }
+
+-- |(a, b)| = |a| * |b|
+-- |(Bool, Unit)| = |Bool| * |Unit| = 2 * 1 = 2
+
+-- |MixedFraction a| = |Word8| x |a| x |a| = 256 x |a| x |a|
+-- |MixedFraction Bool| = |Word8| x |Bool| x |Bool| = 256 x 2 x 2 = 1024
+```
+
+We can prove `a x 1 = a` by showing an isomorphism between `(a, Unit)` and `a`.
+
+```haskell
+-- |(a, b)| = |a| x |b|
+-- |()| = 1
+-- |(a, Unit) = |a| x 1
+-- |a| x 1 == |a|
+
+prodUnitTo :: a -> (a, Unit)
+prodUnitTo a = (a, ())
+
+prodUnitFrom :: (a, Unit)) -> a
+prodUnitFrom (a, _) = a
+```
+
+We can think of the unit type as being an identity for product types (`a x Unit = a`).
+
+### Functions
+
+The cardinality of a function is the result's cardinality to the input's cardinality power.
+
+```haskell
+-- |a -> b| =|b| x |b| x |b| x ... x |b| = |b|^|a|
+
+-- |Bool -> Bool| = 2^2 = 4
+-- id, not, const True, const False
+
+-- Either Bool (Bool, Maybe Bool) -> Bool`
+-- |Bool| ^ (|Bool| + (|Bool| x (|Nothing| + |Bool|)))
+-- 2 ^ (2 + (2 x (1 + 2)))
+-- 2 ^ 8
+-- 256
+```
+
+### Example: Tic-Tac-Toe
+
+Naive implementation:
+
+```haskell
+data TicTacToe a = TicTacToe
+  { topLeft      :: a
+  , topCenter    :: a
+  , topRight     :: a
+  , centerLeft   :: a
+  , centerCenter :: a
+  , centerRight  :: a
+  , bottomLeft   :: a
+  , bottomCenter :: a
+  , bottomRight  :: a
+  }
+
+emptyBoard :: TicTacToe (Maybe a)
+emptyBoard = TicTacToe
+    Nothing Nothing Nothing
+    Nothing Nothing Nothing
+    Nothing Nothing Nothing
+```
+
+We can analyse TicTacToe's cardinality.
+
+```haskell
+-- |TicTacToe a| = |a|^9 == |a|^(3 x 3)
+-- TicTacToe is isomorphic to (|3|, |3|) -> a
+```
+
+Due to the isomorphism, we can represent the board as:
+
+```haskell
+data Three = One | Two | Three
+
+data TicTacToe a = TicTacToe
+  { board :: Three -> Three -> a
+  }
+
+emptyBoard :: TicTacToe (Maybe a)
+emptyBoard = TicTacToe $ const $ const Nothing
+```
+
+# The Curry-Howard Isomorphism
+
+The Curry-Howard isomorphism loosely states that every statement in logic is equivalent to some computer program and vice-versa.
+
+Algebra | Logic | Types
+------- | ----- | ------
+a + b | a \\/ b | Either a b
+a x b | a /\\ b | (a, b)
+b^a | a => b | a -> b
+a = b | a <=> b | isomorphism
+0 | \_\|\_ | Void
+1 | inverted \_\|\_ | Unit
+----
