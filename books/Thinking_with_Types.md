@@ -1,5 +1,7 @@
 # My notes on Thinking with Types
 
+The best book about type level programming I have found.
+
 ## Chapter 1 - The Algebra Behind Types
 
 ### Isomorphisms and cardinalities
@@ -204,7 +206,7 @@ emptyBoard = TicTacToe $ const $ const Nothing
 
 # The Curry-Howard Isomorphism
 
-The Curry-Howard isomorphism loosely states that every statement in logic is equivalent to some computer program and vice-versa.
+The Curry-Howard isomorphism loosely states that types correspond to theorems and its values correspond to proofs of that theorem.
 
 Algebra | Logic | Types
 ------- | ----- | ------
@@ -215,3 +217,65 @@ a = b | a <=> b | isomorphism
 0 | \_\|\_ | Void
 1 | inverted \_\|\_ | Unit
 ----
+
+Consider `a^1 = a`. It corresponds to an isomorphism between `() -> a` and `a`.
+There is no distinction between having a value or a pure program that computes it.
+
+A more complicated example:
+
+
+```haskell
+-- Prove: a^b x a^c = a^(b + c)
+
+-- a^b x a^c = (b -> a, c -> a)
+-- a^(b + c) = Either b c -> a
+
+from :: (b -> a, c -> a) -> (Either b c -> a)
+from (f, _) (Left x) = f x
+from (_, g) (Right y) = g y
+
+to :: (Either b c -> a) -> (b -> a, c -> a)
+to f = (f . Left, f . Right)
+```
+
+
+Curry and uncurry:
+
+```haskell
+-- Prove: a^(a x c) = (a^b)^c
+
+-- a^(b x c) = (b, c) -> a
+-- (a ^ b)^c = b -> c -> a
+
+uncurry :: (b -> c -> a) -> (b, c) -> a
+uncurry f (y, z) = f y z
+
+curry :: ((b, c) -> a) -> b -> c -> a
+curry f y z = f (y, z)
+```
+
+### Canonical Representations
+
+The canonical representation is known as the sum of products.
+
+ * Sum types on the outside
+ * Product types on the inside
+ * Sum types are represented via `Either`
+ * Product types are represented via `(,)`
+ * Exception for numeric types
+
+Examples:
+
+```haskell
+Unit
+
+Either a b
+
+Either (a, b) (c, d)
+
+a -> b
+
+(a, Int)
+```
+
+The canonical representation of `Maybe a` is `Either a ()`.
