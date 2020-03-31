@@ -279,3 +279,18 @@ a -> b
 ```
 
 The canonical representation of `Maybe a` is `Either a ()`.
+
+## Chapter 2 - Terms, Types and Kinds
+
+Terms are values that we can manipulate.
+Types are proofs, to the compiler, that our programs make some sense.
+
+In type-level programming, types and kinds are analogous.
+Now we manipulate types and the kinds are the proofs.
+
+The kind system can be thought as the type system for types. So, we can think of kinds as the types of types.
+
+Historically, `*` refers to the kind of types that have inhabitants. `TYPE` has been proposed as the new symbol.
+`*` is the kind of `Int`, `Bool`, or `Maybe Char`.
+What all of these types have in common is that they exist at runtime.
+It's possible to have terms of type `Maybe Char` and their kind would be `*`. However, it's not possible to have terms of type `Maybe`. `Maybe` has the kind `* -> *`.
