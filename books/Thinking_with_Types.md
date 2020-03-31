@@ -294,3 +294,52 @@ Historically, `*` refers to the kind of types that have inhabitants. `TYPE` has 
 `*` is the kind of `Int`, `Bool`, or `Maybe Char`.
 What all of these types have in common is that they exist at runtime.
 It's possible to have terms of type `Maybe Char` and their kind would be `*`. However, it's not possible to have terms of type `Maybe`. `Maybe` has the kind `* -> *`.
+`Maybe` is a a Higher-kinded type since it has a type variable.
+`Maybe Int` is a fully saturated higher-kinded type.
+`Either` takes two parameters, so its kind is `*->*->*`.
+
+### Constraint Kinds
+
+Kinds apply to everything at type-level.
+
+```haskell
+>:t show
+show :: Show a => a -> String
+>:k Show
+Show :: * -> Constraint
+>:k Show Int
+Show Int :: Constraint
+```
+
+`Constraint` is the kind of any fully saturated type-class.
+
+```haskell
+>:k Functor
+Functor :: (* -> *) -> Constraint
+>:k Functor Maybe
+Functor Maybe :: Constraint
+>:k Monad
+Monad :: (* -> *) -> Constraint
+>:k MonadTrans
+MonadTrans :: ((* -> *) -> * -> *) -> Constraint
+```
+
+### Data Kinds
+
+The `-XDataKinds` lifts data constructors into type constructors and types into kinds.
+
+```haskell
+>:set -XDataKinds
+>data Spin = Up | Down
+>:t Up
+Up :: Spin
+>:k Up'
+Up :: Spin
+>:k Spin
+Spin :: *
+```
+
+* `'Up` and `'Down` are called promoted data constructors of kind `Spin`.
+* `Spin` is a type constructor of kind `*`
+* `Up` and `Down` are data constructors of type `Spin`
+
