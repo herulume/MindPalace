@@ -357,3 +357,22 @@ a = Nothing
 b :: Maybe 'Unit -- fails!
 b = undefined
 ```
+
+Promoted data constructors are of the wrong kind to exist at runtine, so why are they useful?
+They can be used as phantom parameters.
+
+```haskell
+-- data UserType = User | Admin
+data Admin = Admin
+data User =
+  User
+    { userAdminToken :: Maybe (Proxy 'Admin)
+    }
+
+doSensitiveThings :: Proxy 'Admin -> IO ()
+doSensitiveThings = undefined
+```
+
+With `UserType`, it's possible to call `doSensitiveThings` as a normal user.
+However, using the `Maybe (Proxy 'Admin)` we get a type error when calling `doSensitiveThings` as a
+normal user. This way, we have encoded our business logic in the type system.
