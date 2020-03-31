@@ -343,3 +343,17 @@ Spin :: *
 * `Spin` is a type constructor of kind `*`
 * `Up` and `Down` are data constructors of type `Spin`
 
+
+```haskell
+data Unit = Unit
+
+-- Ok
+a :: Maybe Unit
+a = Nothing
+
+-- :k Maybe :: * -> *
+-- :k 'Unit :: Unit
+
+b :: Maybe 'Unit -- fails!
+b = undefined
+```
