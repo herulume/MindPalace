@@ -129,7 +129,7 @@ i¹⁵ = i³ = -i
 - Numbers like `2*i` (`2i`) are known as imaginary numbers
 - Numbers like `3 + 5 * i` are called **complex numbers**
 - A complex number is an expression: `c = a + b * i = a + bi` where `a`, `b` are real numbers
-- `a` is called the real part of c, whereas `b` is its imaginary part
+- `a` is called the real part of `c`, whereas `b` is its imaginary part
 - The set of all complex numbers will be denoted as `C`
 
 - `c1 = 3 − i` and `c2 = 1 + 4i`
@@ -164,3 +164,55 @@ c1 * c2
 
 #### Chapter 1 continuation
 
+- **Fundamental Theorem of Algebra**: Every polynomial equation of one variable with complex coefficients has a complex solution
+
+#### Exercise 1.1.4
+
+Verify that the complex number `−1 + i` is a solution for the polynomial equation `x² + 2x + 2 = 0`.
+
+```
+x² + 2x + 2 = 0
+
+{ x = -1 + i }
+
+(-1 + i)² + 2(-1 + i) + 2 = 0
+1 - 2i + i² -2 + 2i + 2 = 0
+1 + i² = 0
+1 - 1 = 0
+0 = 0
+```
+
+#### Programming Drill 1.1.1
+
+Write a program that accepts two complex numbers and outputs their sum and their product.
+
+```haskell
+data Complex = C Float Float -- C Real Imaginary
+
+sumC :: Complex -> Complex -> Complex
+sumC (C r0 i0) (C r1 i1) = C (r0 + r1) (i0 + i1)
+
+mulC :: Complex -> Complex -> Complex
+mulC (C r0 i0) (C r1 i1) = C (r0*r1 - i0*i1) (r0*i1 + i0*r1)
+
+toStr :: Complex -> String
+toStr (C r i) = show r ++ " + " ++ show i ++ "*i"
+
+main :: IO ()
+main = do
+    putStrLn "Input expect: C float float"
+    c0 <- getC "First complex number"
+    c1 <- getC "Second complex number"
+    putStrLn $ "(" ++ toStr c0 ++ ") + (" ++ toStr c1 ++ ") = " ++ toStr (sumC c0 c1)
+    putStrLn $ "(" ++ toStr c0 ++ ") * (" ++ toStr c1 ++ ") = " ++ toStr (mulC c0 c1)
+
+
+-- lazy about errors
+getC :: String -> IO Complex
+getC s = do
+    putStrLn s
+    l <- getLine
+    case words l of
+      ["C", r, i] -> return $ C (read r) (read i)
+      _ -> error "Wrong format: C float float"
+```
