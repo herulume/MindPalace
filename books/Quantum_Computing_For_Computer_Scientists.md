@@ -125,3 +125,42 @@ i¹⁵ = i³ = -i
 ```
 
 #### Chapter 1 continuation
+
+- Numbers like `2*i` (`2i`) are known as imaginary numbers
+- Numbers like `3 + 5 * i` are called **complex numbers**
+- A complex number is an expression: `c = a + b * i = a + bi` where `a`, `b` are real numbers
+- `a` is called the real part of c, whereas `b` is its imaginary part
+- The set of all complex numbers will be denoted as `C`
+
+- `c1 = 3 − i` and `c2 = 1 + 4i`
+- `c1 + c2` = `3 − i + 1 + 4i` = `(3 + 1) + (−1 + 4)i` = `4 + 3i`
+- `c1 * c2` = `(3 − i) * (1 + 4i)` = `(3 * 1) + (3 * 4i) + (−i * 1) + (−i * 4i)` = `(3 + 4) + (−1 + 12)i` = `7 + 11i`
+
+#### Chapter 1.1.3
+
+Let `c1 = −3 + i` and `c2 = 2 − 4i`.
+Calculate `c1 + c2` and `c1 * c2`.
+
+```
+c1 = −3 + i
+c2 = 2 − 4i
+
+c1 + c2
+-3 + i + 2 - 4i
+-1 - 3i
+```
+
+```
+c1 = −3 + i
+c2 = 2 − 4i
+
+c1 * c2
+(-3 + i) * (2 - 4i)
+(-3 * 2) + (-3 * -4i) + (i * 2) + (i * -4i)
+-6 + 12i + 2i + -4i²
+-6 + 14i + 4
+-2 + 14i
+```
+
+#### Chapter 1 continuation
+
