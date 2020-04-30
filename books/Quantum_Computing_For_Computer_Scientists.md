@@ -52,3 +52,19 @@ This will be a slow read.
 - Quantum gates will have to follow the dynamics of quantum operations
 - Certain quantum operations are reversible hence certain quantum gates will have to be reversible
 
+### Algorithms
+
+- One places a quantum computer in many states simultaneously
+- This needs special care: we cannot measure the computer while it is in this superposition because measuring it would collapse it to a single position
+- Algorithms start with the quantum computer in a single position
+- We shall then delicately place it in a superposition of many states.
+- From there, we manipulate the qubits in a specified way.
+- Finally, some of the qubits are measured.
+- The measurement will collapse the qubits to the desired bits, which will be our output
+
+- Entanglement will also play a role in quantum computing
+- The qubits can be entangled
+- By measuring some of them, others automatically reach the desired position
+
+## Chapter 1 - Complex Numbers
+
