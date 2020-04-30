@@ -66,5 +66,62 @@ This will be a slow read.
 - The qubits can be entangled
 - By measuring some of them, others automatically reach the desired position
 
-## Chapter 1 - Complex Numbers
+### Chapter 1 - Complex Numbers
 
+- For `x² + 1 = 0`, any possible `x²` would be positive or zero (no solution)
+
+#### Exercise 1.1.1
+
+Verify that the equation `x⁴ + 2x² + 1 = 0` has no solution among the real numbers.
+
+```
+x⁴ + 2x² + 1 = 0
+
+{ u = x² }
+
+u² + 2u + 1 = 0
+
+{ quadratic formula }
+
+    -2 +- √(2² - 4*1*1)
+u = ----------------------
+           2 * 1
+     -2
+u = ----  = - 1
+      2
+
+{ u = x² and u = -1 }
+
+x² = -1
+```
+
+No solution.
+
+#### Chapter 1 continuation
+
+- Let us assume `x² = −1`
+- `i² = −1` or `i = √−1`
+- Because it is imaginary, it is denoted `i`
+- Aside from its weird behavior when squared, `i` will behave just like an ordinary number
+- `i³` = `i * i * i` = `i² * i` = `−1 * i` = `−i`
+
+#### Exercise 1.1.2
+
+Find the value of `i¹⁵`.
+
+```
+i⁰ = 1
+i¹ = i
+i² = -1
+i³ = i² * i = -1 * i = -i
+i⁴ = i² * i² = -1 * -1 = 1
+i⁵ = i⁴ * i = 1 * i = i
+
+We see a pattern...
+
+15 `mod` 4 = 3
+
+i¹⁵ = i³ = -i
+```
+
+#### Chapter 1 continuation
