@@ -66,7 +66,9 @@ This will be a slow read.
 - The qubits can be entangled
 - By measuring some of them, others automatically reach the desired position
 
-### Chapter 1 - Complex Numbers
+## Chapter 1
+
+### Complex Numbers
 
 - For `x² + 1 = 0`, any possible `x²` would be positive or zero (no solution)
 
@@ -215,4 +217,70 @@ getC s = do
     case words l of
       ["C", r, i] -> return $ C (read r) (read i)
       _ -> error "Wrong format: C float float"
+```
+
+### The algebra of complex numbers
+
+- What does it mean that `i` squared is equal to `-1`
+
+- **Two** real numbers corresponde to each complex number: its real and imaginary parts
+- `c |-> (a, b)`
+- Real numbers are of the form `(a, 0)` (`a |-> (a, 0)`)
+- Imaginary numbers are of the form `(0, b)` (`i |-> (0, i)`)
+
+- Addition `(a1, b1) + (a2, b2)` = `(a1 + a2, b1 + b2)`
+- Multiplication `(a1, b1) * (a2, b2)` = `(a1, b1)(a2, b2)` = `(a1a2 − b1b2, a1b2 + a2b1)`
+
+```
+c
+(a, b)
+(a, 0) + (0, b)
+(a, 0) + (b, 0) * (0, 1)
+a + bi.
+```
+
+- `i` is just `(0, 1)`
+- A complex number is nothing more than an ordered pair of real numbers
+- The strange multiplcation rule makes sense when approaching it by another model
+
+#### Exercise 1.2.1
+
+Let `c1 = (−3, −1)` and `c2 = (1, −2)`. Calculate their product.
+
+```
+c1 * c2
+(-3, -1)(1, -2)
+(-3 - 2, 6 - 1)
+(-5, 5)
+-5 + 5i
+```
+#### Chapter 1 Continuation
+
+- Addition and multiplcation are **commutative** and **associative**
+
+#### Exercise 1.2.2
+
+Verify that multiplication of complex numbers is associative.
+```
+(c1 * c2) * c3
+((a1, b1)(a2, b2)) * (a3, b3)
+(a1a2 − b1b2, a1b2 + a2b1)(a3, b3)
+((a1a2 - b1b2)a3 - (a1b2 + a2b1)b3, a1b2b3 + a3(a1b2 + a2b1))
+VERIFY THIS
+(a1a2a3 - b1b2a3 - a1b2b3 - a2b1b3, a1b2b3 + a3a1b2 + a3a2b1)
+(a1a2a3 - a1b2b3 - b1a2b3 - b1a3b2, a1a2b3 + a1a3b2 + a2a3b1 - b2b3b1)
+(a1(a2a3 - b2b3) - b1(a2b3 + a3b2), a1(a2b3 + a3b2) + (a2a3 - b2b3)b1)
+(a1, b1)(a2a3 - b2b3, a2b3 + a3b2)
+(a1, b1)((a2, b2)(a3, b3))
+c1 * (c2 * c3)
+```
+
+Bonus: commutative
+```
+c1 * c2
+(a1, b1)(a2, b2)
+(a1a2 − b1b2, a1b2 + a2b1)
+(a2a1 - b2b1, a2b1 + a1b2
+(a2, b2)(a1, b1)
+c2 * c1
 ```
