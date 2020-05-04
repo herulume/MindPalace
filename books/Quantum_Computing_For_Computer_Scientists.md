@@ -236,7 +236,7 @@ c
 (a, b)
 (a, 0) + (0, b)
 (a, 0) + (b, 0) * (0, 1)
-a + bi.
+a + bi
 ```
 
 - `i` is just `(0, 1)`
@@ -261,6 +261,7 @@ c1 * c2
 #### Exercise 1.2.2
 
 Verify that multiplication of complex numbers is associative.
+
 ```
 (c1 * c2) * c3
 ((a1, b1)(a2, b2))(a3, b3)
@@ -284,3 +285,48 @@ c1 * c2
 (a2, b2)(a1, b1)
 c2 * c1
 ```
+
+#### Chapter 1 continuation
+
+- Multiplication **distributes** over addition (`c1 * (c2 + c3)` = `(c1 * c2) + (c1 * c3)`)
+- Subtraction is defined component wise: `c1 − c2` = `(a1, b1) − (a2, b2)` = `(a1 − a2, b1 − b2)`
+- Division is not straightforward. We look at it as the inverse of multiplication.
+
+```
+         (a1, b1)
+(x, y) = --------
+         (a2, b2)
+
+(a1, b1) = (x, y)(a2, b2)
+(a1, b1) = (a2x - b2y, a2y + b2x)
+
+(1) a1 = a2x - b2y
+(2) a2 = a2y + b2x
+
+We need to solve this pair of equations for x and y
+
+Multiply both sides of (1) by a2 and both sides of (2) by b2
+
+(1') a1a2 = a2²x - b2a2y
+(2') b1b2 = a2b2y + b2²x
+
+Adding them we get
+
+a1a2 + b1b2 = (a2² + b2²)x
+
+Solving for x
+
+    a1a2 + b1b2
+x = -----------
+     a2² + b2²
+
+Multiplying (1) and (2) by b2 and -a2 respectively, and then adding them, solving for y
+
+    a2b1 - a1b2
+y = -----------
+     a2² + b2²
+```
+
+- Division: `(a1 + b1i) / (a2 + b2i)` = `(a1a2 + b1b2)/(a2² + b2²)` + `(a2b1 - a1b2)/(a2² + b2²)` * `i`
+- Both `x` and `y` are calculated with the same denominator
+- This quantity has a meaning (seen later on)
