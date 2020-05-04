@@ -223,7 +223,7 @@ getC s = do
 
 - What does it mean that `i` squared is equal to `-1`
 
-- **Two** real numbers corresponde to each complex number: its real and imaginary parts
+- **Two** real numbers correspond to each complex number: its real and imaginary parts
 - `c |-> (a, b)`
 - Real numbers are of the form `(a, 0)` (`a |-> (a, 0)`)
 - Imaginary numbers are of the form `(0, b)` (`i |-> (0, i)`)
@@ -241,7 +241,7 @@ a + bi.
 
 - `i` is just `(0, 1)`
 - A complex number is nothing more than an ordered pair of real numbers
-- The strange multiplcation rule makes sense when approaching it by another model
+- The strange multiplication rule makes sense when approaching it by another model
 
 #### Exercise 1.2.1
 
@@ -256,18 +256,17 @@ c1 * c2
 ```
 #### Chapter 1 Continuation
 
-- Addition and multiplcation are **commutative** and **associative**
+- Addition and multiplication are **commutative** and **associative**
 
 #### Exercise 1.2.2
 
 Verify that multiplication of complex numbers is associative.
 ```
 (c1 * c2) * c3
-((a1, b1)(a2, b2)) * (a3, b3)
+((a1, b1)(a2, b2))(a3, b3)
 (a1a2 − b1b2, a1b2 + a2b1)(a3, b3)
-((a1a2 - b1b2)a3 - (a1b2 + a2b1)b3, a1b2b3 + a3(a1b2 + a2b1))
-VERIFY THIS
-(a1a2a3 - b1b2a3 - a1b2b3 - a2b1b3, a1b2b3 + a3a1b2 + a3a2b1)
+((a1a2 - b1b2)a3 - (a1b2 + a2b1)b3, (a1a2 - b1b2)b3 + a3(a1b2 + a2b1))
+(a1a2a3 - b1b2a3 - a1b2b3 - a2b1b3, a1a2b3 - b1b2b3 + a3a1b2 + a3a2b1)
 (a1a2a3 - a1b2b3 - b1a2b3 - b1a3b2, a1a2b3 + a1a3b2 + a2a3b1 - b2b3b1)
 (a1(a2a3 - b2b3) - b1(a2b3 + a3b2), a1(a2b3 + a3b2) + (a2a3 - b2b3)b1)
 (a1, b1)(a2a3 - b2b3, a2b3 + a3b2)
@@ -276,6 +275,7 @@ c1 * (c2 * c3)
 ```
 
 Bonus: commutative
+
 ```
 c1 * c2
 (a1, b1)(a2, b2)
