@@ -330,3 +330,26 @@ y = -----------
 - Division: `(a1 + b1i) / (a2 + b2i)` = `(a1a2 + b1b2)/(a2² + b2²)` + `(a2b1 - a1b2)/(a2² + b2²)` * `i`
 - Both `x` and `y` are calculated with the same denominator
 - This quantity has a meaning (seen later on)
+
+#### Exercise 1.2.3
+
+Let `c1 = 3i` and `c2 = −1 − i`. Calculate `c1/c2`.
+
+```
+a2² + b2² = 1 + 1 = 2
+
+a1a2 + b1b2 = 0 * -1 + 3 * -1 = -3
+
+a2b1 - a1b2 = -1 * 3 - 0 * -1 = -3
+
+
+(-3/2, -3/2) = -(3/2) - (3/2)i
+```
+
+#### Chapter 1 continuation
+
+- Real numbers have an unary operation, the absolute value: `|a|` = `sqrt (a²)`
+- We can generalize this operation to the complex domain: `|c|` = `|a + bi|` = `sqrt (a² + b²)`
+- This is the **modulus** of a complex number
+- It has a geometric meaning
+
