@@ -1,0 +1,16 @@
+#+title: Index
+
+* Resources
+  - [[file:20200824171747-handlers_tutorial.org][Handlers tutorial]]
+  - Programming with algebraic effects and handlers
+  - Thesis 2019
+
+* Auxiliary
+** CT
+   - Conceptual Mathematics A First Introduction to Categories
+   - Programming with Categories
+   - Seven Sketches in Compositionality
+** Meta
+    * H. Schulzrinne “Writing Technical Articles,”
+    * G.M. Whitesides, “Whitesides’ Group:  Writing a Paper”
+    * Symon Peyton Jones "How to write a great research paper"

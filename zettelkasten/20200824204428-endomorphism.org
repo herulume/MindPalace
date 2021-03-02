@@ -1,0 +1,8 @@
+#+title: Endomorphism
+
+- tags :: [[file:../../../.local/share/Trash/files/20200824163944-category_theory.org][Category-Theory]], [[file:20200824204302-morphism.org][Morphism]]
+
+- [[file:20200824204302-morphism.org][Morphisms]] where the source object and the target object coincide
+
+* Example in Set
+    [[./imgs/conceptual_maths/endomorphismInternal.png]]

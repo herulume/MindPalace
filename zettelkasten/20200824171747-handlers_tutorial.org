@@ -1,0 +1,37 @@
+#+title: Handlers tutorial
+
+- tags :: [[file:20200824163817-thesis.org][Thesis]],[[file:20200824172456-algebraic_effects.org][ Algebraic Effects]], [[file:20200824171845-draft.org][Draft]]
+
+- Algebraic effects are an approach to computational effect
+- Impure behaviour arises from a set of /operators/
+- /Handlers/ are needed to handle these operators
+
+* Language
+
+** Syntax
+[[./imgs/handlers_tutorial/effSyntax.png]]
+
+*** *Operation calls* : /op(v;y.c)/
+        - /v/ : Parameter value (e.g. the meomry location to be read)
+        - /op/ performs the effect
+        - result is bound to /y/
+        - continuation /c/ is called
+        - handlers can override this behaviour
+*** *Generic effects* : opG = *fun* /x/ |-> op(/x/;/y/. *return* /y/)
+        - Uses a trivial continuation
+        - We can recover the /op/ by evaluating *do* /y/ <- opG /v/ *in* /c/.
+
+** Semantics
+   - Each operation call creates a branching point in the evaluation
+   - There are as many branches as there are possible results
+   - *decide* 2 branches; *print* 1 branch; *read* infinite
+
+[[./imgs/handlers_tutorial/branch.png]]
+
+    - With recursion, some of leaves must be labelled button (divergent computation without operations)
+    -  A divergent computation that repeatedly calls operations is represented by a non-well-founded tree
+
+** Considerations
+   - Order of evaluation matters
+   - Language terms: inert values and effectful computations (pottentially)
+   - _Fine-grain call-by-value_ approach

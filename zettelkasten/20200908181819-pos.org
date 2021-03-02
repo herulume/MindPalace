@@ -1,0 +1,18 @@
+#+title: Pos
+
+- tags :: [[file:../../../.local/share/Trash/files/20200824163944-category_theory.org][Category-Theory]], [[file:20200824184713-category.org][Category]], [[file:20200908174417-function.org][Function]], [[file:20200915194103-monote_function.org][Monote function]]
+
+- Objects :: [[file:20200908175716-poset.org][Posets]]
+- Morphisms :: [[file:20200915194103-monote_function.org][Monote function]]
+- Composition :: [[file:20200908174417-function.org][Function]] composition
+- Identity morphism :: $id$
+
+* Proofs
+** Associativity
+   trivial
+** Identity
+   trivial
+** Composition is monotone
+   - $f : A \to B$ is monotone
+   - $g : B \to C$ is monotone
+   - $a \leq_A a' \implies f(a) \leq_B (a') \implies g(f(a) \leq_C g(f(a')) \implies g \circ f$ is monotone

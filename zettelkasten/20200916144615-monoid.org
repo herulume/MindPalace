@@ -1,0 +1,20 @@
+#+title: Monoid
+
+- tags :: [[file:../../../.local/share/Trash/files/20200824163944-category_theory.org][Category-Theory]], [[file:../../../.local/share/Trash/files/20200916160359-abstract_algebra.org][Abstract Algebra]], [[file:20200916160426-algebraic_structure.org][Algebraic Structure]]
+
+- $(M, \bullet, u)$
+- Set $M$ equipped with a binary operation $\bullet : M \times M \to M$ and a unit element $u$
+- $\forall x,y,z \in M$ then $x \bullet (y \bullet z) = (x \bullet y) \bullet z$ and $u \bullet x = x = x \bullet u$
+
+- Sometimes called a [[file:20200916145644-semi_group.org][semi-group]] with a unit
+
+* Monoid as a category
+
+Given a monoid $(M, \bullet, u)$
+
+- Objects :: One single object (doesn't matter what this object is)
+- Morphisms :: $\forall m \in M$
+- Composition :: $\bullet$
+- Identity morphism :: $u$
+
+- A [[file:20200914154910-functor.org][functor]] between two [[file:20200916144615-monoid.org][monoids]] as a [[file:20200824184713-category.org][category]] is a monoid [[file:20200908180443-homomorphism.org][homomorphism]]

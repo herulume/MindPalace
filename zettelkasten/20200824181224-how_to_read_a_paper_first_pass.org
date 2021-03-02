@@ -1,0 +1,30 @@
+#+title: How to read a paper: First pass
+
+- tags :: [[file:20200824180833-how_to_read_a_paper.org][How to read a paper]], [[file:20200824180855-learning.org][Learning]]
+
+- Takes about 5 to 10 minutes
+
+* Steps
+  1) Read the title, abstract, and introduction
+  2) Read the section and sub-section headings
+  3) Read the conclusions
+  4) Glance over the references, taking note of the ones I've read
+
+* The 5 Cs
+
+At the end, I should be able to answer:
+
+  1) Category: What type of paper is this?
+  2) Context: Which other papers is it related to? Which theoretical bases were used.
+  3) Correctness: Do the assumptions appear to be valid?
+  4) Contributions: What are the papers main contributions?
+  5) Clarity: Is the paper well written?
+
+* Conclusion
+  - Most reviewers make only one pass over papers
+  - Choose coherent titles
+  - Write concise and comprehensive abstracts
+
+
+* See also
+  - [[file:20200824181924-how_to_read_a_paper_second_pass.org][Second pass]]

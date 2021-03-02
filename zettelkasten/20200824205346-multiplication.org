@@ -1,0 +1,16 @@
+#+title: Multiplication
+
+- tags :: [[file:../../../.local/share/Trash/files/20200824163944-category_theory.org][Category-Theory]]
+- sources :: [[file:20200827222430-conceptual_mathematics_a_first_introduction_to_categories.org][Conceptual Mathematics: A First Introduction to Categories]]
+
+- /Independent/ choice
+- Decomposition into subproblems
+
+    [[./imgs/conceptual_maths/mul.png]]
+
+- From logic, appears a connection between multiplication and the word /and/
+- Deducing /B/ from /C/ and deducing /A/ from /C/, is the same as deducing /B AND C/ from /C/
+-  $C \to B$, $C \to A$ is the same as $C \to B \times A$
+
+    [[./imgs/conceptual_maths/mul1.png]]
+    [[./imgs/conceptual_maths/mul2.png]]

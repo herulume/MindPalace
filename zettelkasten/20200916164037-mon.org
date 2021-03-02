@@ -1,0 +1,8 @@
+#+title: Mon
+
+- tags :: [[file:../../../.local/share/Trash/files/20200824163944-category_theory.org][Category-Theory]], [[file:20200824184713-category.org][Category]]
+
+- Objects :: [[file:20200916144615-monoid.org][Monoids]]
+- Morphisms :: [[file:20200916144615-monoid.org][Monoid]] [[file:20200908180443-homomorphism.org][homomorphisms]]
+- Composition :: Function like composition
+- Identity morphism :: [[file:20200908180443-homomorphism.org][Homomorphism]] that maps the monoid to itself

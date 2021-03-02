@@ -1,0 +1,8 @@
+#+title: Identity Morphism
+
+- tags :: [[file:../../../.local/share/Trash/files/20200824163944-category_theory.org][Category-Theory]], [[file:20200824204302-morphism.org][Morphism]]
+
+- [[file:20200824204428-endomorphism.org][Endomorphism]] that maps each object to itself
+- For a object /A/
+  - $id_A$
+  - $1_A$

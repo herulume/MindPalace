@@ -1,0 +1,23 @@
+#+title: How to read a paper: Third pass
+
+- tags :: [[file:20200824180833-how_to_read_a_paper.org][How to read a paper]], [[file:20200824180855-learning.org][Learning]]
+
+- Takes about 4 to 5 hours
+
+* Steps
+  1) Make the same assumptions as the authors
+  2) Re-create the work
+  3) Compare with the actual paper
+  4) Identify and challenge every assumption in every statement
+  5) Think how I would present a particular idea
+  6) Take notes about ideas for future work
+
+* Conclusion
+  - I should know the entire structure of the paper from memory
+  - I should be able to identify its strong and weak points
+  - I should be able to identify implicit assumptions
+  - I should be able to identify missing citations to relevant work
+  - I should be able to identify potential issues
+
+* See also
+  - [[file:20200824181924-how_to_read_a_paper_second_pass.org][Second pass]]

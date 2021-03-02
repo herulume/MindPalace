@@ -1,0 +1,29 @@
+#+title: Seven Sketches in Compositionality - Chapter 1
+
+- tags :: [[file:../../../.local/share/Trash/files/20200824163944-category_theory.org][Category-Theory]]
+- source :: [[file:20200902161024-seven_sketches_in_compositionality_an_invitation_to_applied_category_theory.org][Seven Sketches in Compositionality: An Invitation to Applied Category Theory]]
+
+* Chapter 1 - Orders and Galois connections
+** 1.1 - More than the sum of their parts
+   - Structures are compositional but the results of observing them may not be
+   - Observation is "lossy": information extraction requires loss of some details
+   - Some details can be relevant
+
+   - CT is concerned with structures and structure preserving maps
+   - Map $f : X \to Y$ allows us to extract certain features of C by looking at Y
+   - Determining what aspects we want to preserve amounts to deciding in what category we should work on
+
+   - Generative effects :: "surprises" when we observe operations not preserved by the observation
+*** 1.1.1 - A first look at generative effects
+    - 3 points :: o; *; .
+    - System :: way to connect the points
+      - Connections are symmetric and transitive
+    - Observation ::  $\Phi$ = . is connect to *
+    - Operation :: Join aka  $A \lor B$
+      - Transitive closure of the union of the elements
+      [[./imgs/seven_sketches_dots_join.png]]
+    - Generative effect ::
+      - [[./imgs/seven_sketches_dots_false.png]]
+      - but
+      - [[./imgs/seven_sketches_dots_true.png]]
+      - Combining raw data and then extracting information yields different results than extracting information from both sources separately

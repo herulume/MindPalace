@@ -1,0 +1,6 @@
+#+title: Monote function
+
+- tags :: [[file:20200908174417-function.org][Function]]
+
+- $m : A \to B$
+- Monotone :: $a \leq_A a' \implies m(a) \leq_B m(a')$

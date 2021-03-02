@@ -1,0 +1,13 @@
+#+title: Monad from an Adjunction
+
+- tags :: [[file:20200929171123-monad.org][Monad]], [[file:20200927230647-adjunction.org][Adjunction]]
+
+- Let $F$ and $G$ be functors
+[[./imgs/monadAdjunFunctors.png]]
+- For each $A \in Ob(C)$ and $B \in Ob(D)$ there's a [[file:20200927231404-bijection.org][bijection]] $\theta_{A,B} : C(A, GB) \cong D(FA,B)$ natural in $A,B$
+
+
+- A [[file:20200929171123-monad.org][monad]] can be built from the adjunction $F \dashv G$
+- $T = G \circ F$
+- $\eta_A : A \to GFA = \theta^{-1}_{A,FA}(id_{FA})$
+- $\mu : GFGFA \to GFA = G(\theta_{GFA,FA}(id_{GFA}))$
