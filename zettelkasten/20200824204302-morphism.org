@@ -1,3 +1,0 @@
-#+title: Morphism
-
-- tags :: [[file:../../../.local/share/Trash/files/20200824163944-category_theory.org][Category-Theory]]

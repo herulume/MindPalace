@@ -1,8 +1,0 @@
-#+title: Natural Isomorphism
-
-- tags :: [[file:20200927165017-natural_transformation.org][Natural Transformation]], [[file:20200916190424-isomorphism.org][Isomorphism]]
-
-If each component of a [[file:20200927165017-natural_transformation.org][natural transformation]] $\eta$ is an [[file:20200916190424-isomorphism.org][isomorphism]]
-then $\eta$ is a natural isomorphism
-
-$\eta : F \xrightarrow{\cong} G$

@@ -1,3 +1,0 @@
-#+title: Homomorphism
-
-- tags :: [[file:../../../.local/share/Trash/files/20200824163944-category_theory.org][Category-Theory]], [[file:20200824204302-morphism.org][Morphism]]

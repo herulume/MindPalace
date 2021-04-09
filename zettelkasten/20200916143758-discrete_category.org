@@ -1,5 +1,0 @@
-#+title: Discrete Category
-
-- tags :: [[file:../../../.local/share/Trash/files/20200824163944-category_theory.org][Category-Theory]], [[file:20200824184713-category.org][Category]]
-
-A category whose only [[file:20200824204302-morphism.org][morphisms]] are the [[file:20200824185122-identity_morphism.org][identity morphisms]]

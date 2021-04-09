@@ -1,3 +1,0 @@
-#+title: Conceptual Mathematics: A First Introduction to Categories
-
-- tags :: [[file:../../../.local/share/Trash/files/20200824163944-category_theory.org][Category-Theory]]

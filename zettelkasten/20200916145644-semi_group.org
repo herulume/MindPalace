@@ -1,7 +1,0 @@
-#+title: Semi Group
-
-- tags :: [[file:../../../.local/share/Trash/files/20200916160359-abstract_algebra.org][Abstract Algebra]], [[file:20200916160426-algebraic_structure.org][Algebraic Structure]]
-
-- $(M, \bullet)$
-- Set $M$ equipped with a binary operation $\bullet : M \times M \to M$
-- $\forall x,y,z \in M$ then $x \bullet (y \bullet z) = (x \bullet y) \bullet z$

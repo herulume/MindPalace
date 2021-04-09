@@ -1,8 +1,0 @@
-#+title: Cat
-
-- tags :: [[file:../../../.local/share/Trash/files/20200824163944-category_theory.org][Category-Theory]], [[file:20200824184713-category.org][Category]]
-
-- Objects :: Categories
-- Morphisms :: [[file:20200914154910-functor.org][Functors]]
-- Composition :: Functor composition (much like function composition)
-- Identity morphism :: Identity [[file:20200914154910-functor.org][functor]]

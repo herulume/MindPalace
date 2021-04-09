@@ -1,9 +1,0 @@
-#+title: How to read a paper
-
-- tags :: [[file:20200824180855-learning.org][Learning]], [[file:20200827222054-paper.org][Paper]]
-- sources :: [[file:20200827222124-s_keshav.org][S. Keshav]], [[file:20200827222142-david_r_cheriton.org][David R. Cheriton]]
-
-- I should read a paper in 3 passes
-- The [[file:20200824181224-how_to_read_a_paper_first_pass.org][first pass]] gives me a general idea about the paper
-- The [[file:20200824181924-how_to_read_a_paper_second_pass.org][second pass]] lets me grasp the paper's content without details
-- The [[file:20200824182609-how_to_read_a_paper_third_pass.org][third pass]] helps me understand the paper in depth

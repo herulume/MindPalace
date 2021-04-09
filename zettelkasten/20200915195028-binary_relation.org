@@ -1,6 +1,0 @@
-#+title: Binary Relation
-
-- tags :: [[file:20200908175759-relation.org][Relation]]
-
-- Subset of the cartesian product between two sets
-- Given the relation $f$ then  $f \subseteq A× B$

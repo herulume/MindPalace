@@ -1,5 +1,0 @@
-#+title: Endofunctor
-
-- tags :: [[file:20200914154910-functor.org][Functor]]
-
-- A [[file:20200914154910-functor.org][functor]] from a category to itself.
